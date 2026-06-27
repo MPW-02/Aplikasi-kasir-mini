@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kasir Mini V2 - MPW-02</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Kasir Mini Alfamart - MPW-02</h2>
+  
+  Harga Barang: <input type="number" id="harga" placeholder="Contoh: 5000"><br>
+  Jumlah: <input type="number" id="jumlah" placeholder="Contoh: 2"><br>
+  <button onclick="hitung()">Hitung Total</button>
+  
+  <h3>Total Bayar: Rp <span id="total">0</span></h3>
+
+  <script>
+    function hitung() {
+      let harga = document.getElementById('harga').value;
+      let jumlah = document.getElementById('jumlah').value;
+      let total = harga * jumlah;
+      document.getElementById('total').innerText = total;
+    }
+  </script>
+</body>
+</html>
